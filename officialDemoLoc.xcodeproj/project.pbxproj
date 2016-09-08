@@ -48,6 +48,8 @@
 		6E1247361D7D0F6100CA376C /* MOMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1247341D7D0F6100CA376C /* MOMapViewController.m */; };
 		6E1247371D7D0F6100CA376C /* MOMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1247351D7D0F6100CA376C /* MOMapViewController.xib */; };
 		6E1247391D7D1B4500CA376C /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1247381D7D1B4500CA376C /* AMapSearchKit.framework */; };
+		6E700CAD1D81C67400A687E8 /* MOMapLookGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E700CAB1D81C67400A687E8 /* MOMapLookGPS.m */; };
+		6E700CAE1D81C67400A687E8 /* MOMapLookGPS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */; };
 		6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,9 @@
 		6E1247341D7D0F6100CA376C /* MOMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOMapViewController.m; sourceTree = "<group>"; };
 		6E1247351D7D0F6100CA376C /* MOMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOMapViewController.xib; sourceTree = "<group>"; };
 		6E1247381D7D1B4500CA376C /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		6E700CAA1D81C67400A687E8 /* MOMapLookGPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOMapLookGPS.h; sourceTree = "<group>"; };
+		6E700CAB1D81C67400A687E8 /* MOMapLookGPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOMapLookGPS.m; sourceTree = "<group>"; };
+		6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOMapLookGPS.xib; sourceTree = "<group>"; };
 		6E9A69631D7D56C8006A8C8A /* MOPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPointAnnotation.h; sourceTree = "<group>"; };
 		6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPointAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +205,9 @@
 				6E1247331D7D0F6100CA376C /* MOMapViewController.h */,
 				6E1247341D7D0F6100CA376C /* MOMapViewController.m */,
 				6E1247351D7D0F6100CA376C /* MOMapViewController.xib */,
+				6E700CAA1D81C67400A687E8 /* MOMapLookGPS.h */,
+				6E700CAB1D81C67400A687E8 /* MOMapLookGPS.m */,
+				6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */,
 				6E9A69631D7D56C8006A8C8A /* MOPointAnnotation.h */,
 				6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */,
 				3AD8DAB71D23D46100AFE575 /* Items */,
@@ -389,6 +397,7 @@
 				3A03F2CE1BAFD870000491AF /* icon-72.png in Resources */,
 				3A03F2D11BAFD870000491AF /* icon@2x.png in Resources */,
 				3A59454C1BA96BAB000A514B /* LaunchScreen.storyboard in Resources */,
+				6E700CAE1D81C67400A687E8 /* MOMapLookGPS.xib in Resources */,
 				3AD8DAC71D23D46100AFE575 /* icon_location@3x.png in Resources */,
 				3A03F2D01BAFD870000491AF /* icon.png in Resources */,
 				3A5945491BA96BAB000A514B /* Assets.xcassets in Resources */,
@@ -419,6 +428,7 @@
 				6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */,
 				3AD8DACC1D23D46100AFE575 /* MainViewController.m in Sources */,
 				6E1247361D7D0F6100CA376C /* MOMapViewController.m in Sources */,
+				6E700CAD1D81C67400A687E8 /* MOMapLookGPS.m in Sources */,
 				3AD8DAC81D23D46100AFE575 /* MonitoringRegionViewController.m in Sources */,
 				3A59453E1BA96BAB000A514B /* main.m in Sources */,
 			);

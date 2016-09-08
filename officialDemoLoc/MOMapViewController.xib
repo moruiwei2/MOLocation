@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MOMapViewController">
             <connections>
+                <outlet property="button_cencal_Ri" destination="O89-3R-ZhN" id="TNu-7y-d9v"/>
                 <outlet property="cencal_W" destination="tcV-zC-AZb" id="y3J-x2-rgi"/>
                 <outlet property="imageView_Y" destination="gyX-KC-UVk" id="gZJ-ra-evf"/>
                 <outlet property="imageView_icon" destination="57s-uK-6o2" id="z3q-Ms-v8c"/>
@@ -46,31 +47,62 @@
                                 </mask>
                             </variation>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRE-iK-zop">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="QQz-qu-bcl"/>
+                                <constraint firstAttribute="height" constant="35" id="pI1-hE-I4x"/>
+                            </constraints>
+                            <state key="normal" image="icon_location"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="QQz-qu-bcl"/>
+                                    <exclude reference="pI1-hE-I4x"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="QQz-qu-bcl"/>
+                                    <include reference="pI1-hE-I4x"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="clickOrigin:" destination="-1" eventType="touchUpInside" id="w5N-Au-F5f"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="57s-uK-6o2" firstAttribute="centerX" secondItem="xc5-jt-ZLm" secondAttribute="centerX" id="5wd-ht-1Wy"/>
                         <constraint firstAttribute="height" constant="300" id="MVR-b0-nqo"/>
+                        <constraint firstAttribute="trailing" secondItem="WRE-iK-zop" secondAttribute="trailing" constant="30" id="QkC-wd-Cml"/>
                         <constraint firstItem="57s-uK-6o2" firstAttribute="centerY" secondItem="xc5-jt-ZLm" secondAttribute="centerY" id="gyX-KC-UVk"/>
+                        <constraint firstItem="WRE-iK-zop" firstAttribute="top" secondItem="xc5-jt-ZLm" secondAttribute="top" constant="10" id="uoK-1u-ksj"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
                             <exclude reference="57s-uK-6o2"/>
+                            <exclude reference="WRE-iK-zop"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="MVR-b0-nqo"/>
                             <exclude reference="5wd-ht-1Wy"/>
                             <exclude reference="gyX-KC-UVk"/>
+                            <exclude reference="QkC-wd-Cml"/>
+                            <exclude reference="uoK-1u-ksj"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
                             <include reference="57s-uK-6o2"/>
+                            <include reference="WRE-iK-zop"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="MVR-b0-nqo"/>
                             <include reference="5wd-ht-1Wy"/>
                             <include reference="gyX-KC-UVk"/>
+                            <include reference="QkC-wd-Cml"/>
+                            <include reference="uoK-1u-ksj"/>
                         </mask>
                     </variation>
                 </view>
@@ -87,6 +119,7 @@
                     <subviews>
                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索地点" translatesAutoresizingMaskIntoConstraints="NO" id="04A-yW-paq">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.0" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="PIj-3M-41x"/>
                             </constraints>
@@ -215,7 +248,7 @@
                 <constraint firstItem="x3G-2L-yVc" firstAttribute="top" secondItem="xc5-jt-ZLm" secondAttribute="bottom" id="287-zg-sou"/>
                 <constraint firstItem="lI7-Ks-HH2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6O6-x5-0EZ"/>
                 <constraint firstAttribute="bottom" secondItem="lI7-Ks-HH2" secondAttribute="bottom" id="95w-Tr-kgx"/>
-                <constraint firstItem="58a-BH-n8c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="CsE-Yd-eQ2"/>
+                <constraint firstItem="58a-BH-n8c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="CsE-Yd-eQ2"/>
                 <constraint firstAttribute="trailing" secondItem="xc5-jt-ZLm" secondAttribute="trailing" id="ERV-jc-o7V"/>
                 <constraint firstAttribute="trailing" secondItem="x3G-2L-yVc" secondAttribute="trailing" id="IIJ-ry-qDn"/>
                 <constraint firstAttribute="bottom" secondItem="x3G-2L-yVc" secondAttribute="bottom" id="Usw-5w-oR2"/>
@@ -279,6 +312,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon_location" width="50" height="50"/>
         <image name="icon_me_position" width="15" height="31"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@
 
 @interface MainViewController ()
 
+@property (nonatomic,weak)UITextField *textF;
 
 @end
 
@@ -22,12 +23,24 @@
 {
     [super viewDidLoad];
     
+    UITextField *textF = [[UITextField alloc]init];
+    textF.placeholder = @"点击空白处push";
+    textF.frame = CGRectMake(50, 120, 200, 40);
+    self.textF = textF;
+    [self.view addSubview:textF];
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
     MOMapViewController *movc = [[MOMapViewController alloc]init];
+    __weak typeof(self) weakSelf = self;
     movc.option = ^(MOPointAnnotation *pointAnnotation){
-        
+        weakSelf.textF.text = pointAnnotation.name;
         NSLog(@"%@",pointAnnotation.name);
         
     };
+    [self.navigationController pushViewController:movc animated:YES];
 }
+
 
 @end

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MOMapLookGPS">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_map" destination="agI-hA-oDM" id="BIO-oa-R7s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agI-hA-oDM" customClass="MAMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI0-4T-wpf">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Bzj-Vk-7YS"/>
+                                <constraint firstAttribute="width" constant="30" id="CgQ-1M-HdE"/>
+                            </constraints>
+                            <state key="normal" image="icon_location">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Bzj-Vk-7YS"/>
+                                    <exclude reference="CgQ-1M-HdE"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="Bzj-Vk-7YS"/>
+                                    <include reference="CgQ-1M-HdE"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="pYI-UQ-x72"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="OI0-4T-wpf" firstAttribute="top" secondItem="agI-hA-oDM" secondAttribute="top" constant="15" id="adN-ZH-GTj"/>
+                        <constraint firstAttribute="trailing" secondItem="OI0-4T-wpf" secondAttribute="trailing" constant="20" id="dW7-fY-8Qg"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="OI0-4T-wpf"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="adN-ZH-GTj"/>
+                            <exclude reference="dW7-fY-8Qg"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="OI0-4T-wpf"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="adN-ZH-GTj"/>
+                            <include reference="dW7-fY-8Qg"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="agI-hA-oDM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0iH-PV-4zj"/>
+                <constraint firstAttribute="trailing" secondItem="agI-hA-oDM" secondAttribute="trailing" id="5K6-KC-H9q"/>
+                <constraint firstAttribute="bottom" secondItem="agI-hA-oDM" secondAttribute="bottom" id="ImG-9a-IgG"/>
+                <constraint firstItem="agI-hA-oDM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c1I-i2-asT"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="agI-hA-oDM"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0iH-PV-4zj"/>
+                    <exclude reference="5K6-KC-H9q"/>
+                    <exclude reference="ImG-9a-IgG"/>
+                    <exclude reference="c1I-i2-asT"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="agI-hA-oDM"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="0iH-PV-4zj"/>
+                    <include reference="5K6-KC-H9q"/>
+                    <include reference="ImG-9a-IgG"/>
+                    <include reference="c1I-i2-asT"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_location" width="50" height="50"/>
+    </resources>
+</document>

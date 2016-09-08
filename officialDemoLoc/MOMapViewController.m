@@ -28,13 +28,12 @@
 @property (nonatomic,copy) CLLocation *location;
 @property (nonatomic,strong) MAPointAnnotation *pointAnnotation;
 @property (nonatomic,strong) MOPointAnnotation *myPointAnnotation;
-
 @property (nonatomic,assign) NSUInteger optionRow;
 @property (nonatomic,assign) BOOL isClick;
 @property (nonatomic,assign) BOOL isGPSSuccess;
-
 @property (weak, nonatomic) IBOutlet UIImageView *imageView_icon;
 @property (weak, nonatomic) IBOutlet UIView *view_back;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *button_cencal_Ri;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageView_Y;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cencal_W;
@@ -63,6 +62,9 @@
 {
     [super viewDidLoad];
     
+    self.title = @"定位";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.searchBar_main.delegate = self;
     
     self.search = [[AMapSearchAPI alloc] init];
@@ -70,6 +72,7 @@
     
     //设置代理
     self.view_map.delegate = self;
+    self.view_map.showsCompass = NO;//隐藏罗盘
     
     [self initCompleteBlock];
     //初始化
@@ -82,6 +85,8 @@
     button.frame = CGRectMake(0, 0, 50, 30);
     [button setTitle:@"确定" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithRed:21.0/255.0 green:126.0/255.0 blue:251.0/255.0 alpha:1] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *ri = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = ri;
@@ -97,7 +102,13 @@
 }
 - (void)clickCecan
 {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)clickOrigin:(id)sender {
+    
+    [self.view_map setCenterCoordinate:self.location.coordinate animated:YES];
+    
 }
 /**
  *  点击确定
@@ -106,6 +117,7 @@
 {
     if (self.arr_data.count > 0 && self.option != nil) {
         self.option(self.arr_data[self.optionRow]);
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
@@ -124,9 +136,9 @@
  */
 - (IBAction)clickCencal:(id)sender {
     __weak typeof(self) weakSelf = self;
-    self.search_Y.constant = -20;
+    self.search_Y.constant = 44;
     self.cencal_W.constant = 0;
-    
+    self.button_cencal_Ri.constant = 0;
     [UIView animateWithDuration:0.35 animations:^{
         [weakSelf.view layoutIfNeeded];
         weakSelf.view_back.alpha = 0;
@@ -141,7 +153,6 @@
         self.view_back.userInteractionEnabled = NO;
         self.tableView_two.alpha = 0;
     }
-    
 }
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
@@ -150,13 +161,13 @@
     self.cencal_W.constant = 40;
     self.tableView_two.alpha = 1;
     self.view_back.alpha = 1;
+    self.button_cencal_Ri.constant = 10;
     [UIView animateWithDuration:0.35 animations:^{
         [weakSelf.view layoutIfNeeded];
         weakSelf.tableView_two.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
     }];
     self.view_back.userInteractionEnabled = YES;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
 
     return YES;
 }
@@ -218,6 +229,7 @@ void shakerAnimation (UIView *view ,NSTimeInterval duration,float height){
     
     NSMutableArray *poiAnnotations = [NSMutableArray arrayWithCapacity:response.pois.count];
     [self.arr_data removeAllObjects];
+    [self.arr_two removeAllObjects];
     if (self.myPointAnnotation) {
         [self.arr_data addObject:self.myPointAnnotation];
         self.myPointAnnotation = nil;
@@ -348,6 +360,8 @@ void shakerAnimation (UIView *view ,NSTimeInterval duration,float height){
     [self.locationManager setDelegate:nil];
     
     [self.view_map removeAnnotations:self.view_map.annotations];
+    
+    
 }
 
 - (void)configLocationManager
@@ -470,6 +484,9 @@ void shakerAnimation (UIView *view ,NSTimeInterval duration,float height){
 }
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (tableView == self.tableView_two) {
+        return 0.01;
+    }
     return 10;
 }
 - (CGFloat )tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
