@@ -11,6 +11,7 @@
 #import "MOMapViewController.h"
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "MOPointAnnotation.h"
+#import "officialDemoLoc-Swift.h"
 #define DefaultLocationTimeout  6
 #define DefaultReGeocodeTimeout 3
 
@@ -57,7 +58,24 @@
     }
     return _arr_data;
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
+    if ([CLLocationManager locationServicesEnabled] &&
+        ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized
+         || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)) {
+            //定位功能可用，开始定位
+        }
+    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
+        [MOAlertView showAlertWithTitle:@"定位服务" message:@"请开启定位服务" buttonArrayAsString:@[@"取消",@"去开启"] finish:^(NSInteger index) {
+            if (index == 1) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }
+        }];
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

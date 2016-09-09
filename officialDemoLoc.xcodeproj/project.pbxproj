@@ -52,6 +52,7 @@
 		6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */; };
 		6EC673301D829C3100892D52 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6732E1D829C3100892D52 /* MainViewController.m */; };
 		6EC673311D829C3100892D52 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6732F1D829C3100892D52 /* MainViewController.xib */; };
+		6EC673341D82A1E700892D52 /* MOAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC673331D82A1E700892D52 /* MOAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,8 @@
 		6EC6732D1D829C3100892D52 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6EC6732E1D829C3100892D52 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6EC6732F1D829C3100892D52 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		6EC673321D82A1E600892D52 /* officialDemoLoc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "officialDemoLoc-Bridging-Header.h"; sourceTree = "<group>"; };
+		6EC673331D82A1E700892D52 /* MOAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +216,7 @@
 				6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */,
 				6E9A69631D7D56C8006A8C8A /* MOPointAnnotation.h */,
 				6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */,
+				6EC673331D82A1E700892D52 /* MOAlertView.swift */,
 				3AD8DAB71D23D46100AFE575 /* Items */,
 				3A03F2A51BAFD59B000491AF /* Configuration */,
 				3AD8DAB41D23D46100AFE575 /* Images */,
@@ -220,6 +224,7 @@
 				3A59454A1BA96BAB000A514B /* LaunchScreen.storyboard */,
 				3A59454D1BA96BAB000A514B /* Info.plist */,
 				3A59453C1BA96BAB000A514B /* Supporting Files */,
+				6EC673321D82A1E600892D52 /* officialDemoLoc-Bridging-Header.h */,
 			);
 			path = officialDemoLoc;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				3A03F2B51BAFD59B000491AF /* MAAppDelegate.m in Sources */,
 				3AD8DAC91D23D46100AFE575 /* SerialLocationViewController.m in Sources */,
 				6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */,
+				6EC673341D82A1E700892D52 /* MOAlertView.swift in Sources */,
 				6E1247361D7D0F6100CA376C /* MOMapViewController.m in Sources */,
 				6E700CAD1D81C67400A687E8 /* MOMapLookGPS.m in Sources */,
 				3AD8DAC81D23D46100AFE575 /* MonitoringRegionViewController.m in Sources */,
@@ -581,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -595,6 +602,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.AiRenXin.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "20aa9f59-b7c1-4e63-adeb-7320668ec97f";
+				SWIFT_OBJC_BRIDGING_HEADER = "officialDemoLoc/officialDemoLoc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -602,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -616,6 +626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.AiRenXin.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "20aa9f59-b7c1-4e63-adeb-7320668ec97f";
+				SWIFT_OBJC_BRIDGING_HEADER = "officialDemoLoc/officialDemoLoc-Bridging-Header.h";
 			};
 			name = Release;
 		};
