@@ -44,13 +44,14 @@
 		3AD8DAC91D23D46100AFE575 /* SerialLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8DABD1D23D46100AFE575 /* SerialLocationViewController.m */; };
 		3AD8DACA1D23D46100AFE575 /* SingleLocaitonAloneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8DAC01D23D46100AFE575 /* SingleLocaitonAloneViewController.m */; };
 		3AD8DACB1D23D46100AFE575 /* SingleLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8DAC31D23D46100AFE575 /* SingleLocationViewController.m */; };
-		3AD8DACC1D23D46100AFE575 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD8DAC51D23D46100AFE575 /* MainViewController.m */; };
 		6E1247361D7D0F6100CA376C /* MOMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1247341D7D0F6100CA376C /* MOMapViewController.m */; };
 		6E1247371D7D0F6100CA376C /* MOMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1247351D7D0F6100CA376C /* MOMapViewController.xib */; };
 		6E1247391D7D1B4500CA376C /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1247381D7D1B4500CA376C /* AMapSearchKit.framework */; };
 		6E700CAD1D81C67400A687E8 /* MOMapLookGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E700CAB1D81C67400A687E8 /* MOMapLookGPS.m */; };
 		6E700CAE1D81C67400A687E8 /* MOMapLookGPS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */; };
 		6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */; };
+		6EC673301D829C3100892D52 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6732E1D829C3100892D52 /* MainViewController.m */; };
+		6EC673311D829C3100892D52 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6732F1D829C3100892D52 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,8 +95,6 @@
 		3AD8DAC01D23D46100AFE575 /* SingleLocaitonAloneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLocaitonAloneViewController.m; sourceTree = "<group>"; };
 		3AD8DAC21D23D46100AFE575 /* SingleLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLocationViewController.h; sourceTree = "<group>"; };
 		3AD8DAC31D23D46100AFE575 /* SingleLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLocationViewController.m; sourceTree = "<group>"; };
-		3AD8DAC41D23D46100AFE575 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		3AD8DAC51D23D46100AFE575 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6E1247331D7D0F6100CA376C /* MOMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOMapViewController.h; sourceTree = "<group>"; };
 		6E1247341D7D0F6100CA376C /* MOMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOMapViewController.m; sourceTree = "<group>"; };
 		6E1247351D7D0F6100CA376C /* MOMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOMapViewController.xib; sourceTree = "<group>"; };
@@ -105,6 +104,9 @@
 		6E700CAC1D81C67400A687E8 /* MOMapLookGPS.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOMapLookGPS.xib; sourceTree = "<group>"; };
 		6E9A69631D7D56C8006A8C8A /* MOPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPointAnnotation.h; sourceTree = "<group>"; };
 		6E9A69641D7D56C8006A8C8A /* MOPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPointAnnotation.m; sourceTree = "<group>"; };
+		6EC6732D1D829C3100892D52 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6EC6732E1D829C3100892D52 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6EC6732F1D829C3100892D52 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +202,9 @@
 			children = (
 				3A03F2AF1BAFD59B000491AF /* MAAppDelegate.h */,
 				3A03F2B01BAFD59B000491AF /* MAAppDelegate.m */,
-				3AD8DAC41D23D46100AFE575 /* MainViewController.h */,
-				3AD8DAC51D23D46100AFE575 /* MainViewController.m */,
+				6EC6732D1D829C3100892D52 /* MainViewController.h */,
+				6EC6732E1D829C3100892D52 /* MainViewController.m */,
+				6EC6732F1D829C3100892D52 /* MainViewController.xib */,
 				6E1247331D7D0F6100CA376C /* MOMapViewController.h */,
 				6E1247341D7D0F6100CA376C /* MOMapViewController.m */,
 				6E1247351D7D0F6100CA376C /* MOMapViewController.xib */,
@@ -397,6 +400,7 @@
 				3A03F2CE1BAFD870000491AF /* icon-72.png in Resources */,
 				3A03F2D11BAFD870000491AF /* icon@2x.png in Resources */,
 				3A59454C1BA96BAB000A514B /* LaunchScreen.storyboard in Resources */,
+				6EC673311D829C3100892D52 /* MainViewController.xib in Resources */,
 				6E700CAE1D81C67400A687E8 /* MOMapLookGPS.xib in Resources */,
 				3AD8DAC71D23D46100AFE575 /* icon_location@3x.png in Resources */,
 				3A03F2D01BAFD870000491AF /* icon.png in Resources */,
@@ -420,13 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC673301D829C3100892D52 /* MainViewController.m in Sources */,
 				3AD8DACA1D23D46100AFE575 /* SingleLocaitonAloneViewController.m in Sources */,
 				3A3D2CEC1D5344AC0088356E /* BackgroundLocationViewController.m in Sources */,
 				3AD8DACB1D23D46100AFE575 /* SingleLocationViewController.m in Sources */,
 				3A03F2B51BAFD59B000491AF /* MAAppDelegate.m in Sources */,
 				3AD8DAC91D23D46100AFE575 /* SerialLocationViewController.m in Sources */,
 				6E9A69651D7D56C8006A8C8A /* MOPointAnnotation.m in Sources */,
-				3AD8DACC1D23D46100AFE575 /* MainViewController.m in Sources */,
 				6E1247361D7D0F6100CA376C /* MOMapViewController.m in Sources */,
 				6E700CAD1D81C67400A687E8 /* MOMapLookGPS.m in Sources */,
 				3AD8DAC81D23D46100AFE575 /* MonitoringRegionViewController.m in Sources */,

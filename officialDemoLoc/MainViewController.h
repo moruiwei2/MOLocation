@@ -1,8 +1,8 @@
 //
 //  MainViewController.h
-//  AMapLocationDemo
+//  officialDemoLoc
 //
-//  Created by 刘博 on 16/3/7.
+//  Created by 莫瑞伟 on 16/9/9.
 //  Copyright © 2016年 AutoNavi. All rights reserved.
 //
 

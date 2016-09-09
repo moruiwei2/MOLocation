@@ -86,10 +86,10 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="MVR-b0-nqo"/>
-                            <exclude reference="5wd-ht-1Wy"/>
-                            <exclude reference="gyX-KC-UVk"/>
                             <exclude reference="QkC-wd-Cml"/>
                             <exclude reference="uoK-1u-ksj"/>
+                            <exclude reference="5wd-ht-1Wy"/>
+                            <exclude reference="gyX-KC-UVk"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -99,10 +99,10 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="MVR-b0-nqo"/>
-                            <include reference="5wd-ht-1Wy"/>
-                            <include reference="gyX-KC-UVk"/>
                             <include reference="QkC-wd-Cml"/>
                             <include reference="uoK-1u-ksj"/>
+                            <include reference="5wd-ht-1Wy"/>
+                            <include reference="gyX-KC-UVk"/>
                         </mask>
                     </variation>
                 </view>

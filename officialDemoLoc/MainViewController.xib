@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL4-Oq-YBz">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.078431372550000003" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="s33-Pi-o1G"/>
+                    </constraints>
+                    <state key="normal" title="点击push定位"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="s33-Pi-o1G"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="s33-Pi-o1G"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="clickPush:" destination="-1" eventType="touchUpInside" id="qq5-rg-5Fu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-IT-NOt">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.078431372550000003" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fto-h6-dHh"/>
+                    </constraints>
+                    <state key="normal" title="查看定位"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fto-h6-dHh"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="fto-h6-dHh"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="clickLook:" destination="-1" eventType="touchUpInside" id="txC-Nc-V5T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1oV-IT-NOt" secondAttribute="trailing" id="8ZN-p9-ahF"/>
+                <constraint firstItem="JL4-Oq-YBz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="EPt-4o-BC7"/>
+                <constraint firstItem="1oV-IT-NOt" firstAttribute="top" secondItem="JL4-Oq-YBz" secondAttribute="bottom" constant="30" id="Jfp-3B-HIo"/>
+                <constraint firstAttribute="trailing" secondItem="JL4-Oq-YBz" secondAttribute="trailing" id="UNc-gp-9M4"/>
+                <constraint firstItem="1oV-IT-NOt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zir-I7-Kdg"/>
+                <constraint firstItem="JL4-Oq-YBz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aFM-g9-qoy"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="JL4-Oq-YBz"/>
+                    <exclude reference="1oV-IT-NOt"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="EPt-4o-BC7"/>
+                    <exclude reference="UNc-gp-9M4"/>
+                    <exclude reference="aFM-g9-qoy"/>
+                    <exclude reference="8ZN-p9-ahF"/>
+                    <exclude reference="Jfp-3B-HIo"/>
+                    <exclude reference="Zir-I7-Kdg"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="JL4-Oq-YBz"/>
+                    <include reference="1oV-IT-NOt"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="EPt-4o-BC7"/>
+                    <include reference="UNc-gp-9M4"/>
+                    <include reference="aFM-g9-qoy"/>
+                    <include reference="8ZN-p9-ahF"/>
+                    <include reference="Jfp-3B-HIo"/>
+                    <include reference="Zir-I7-Kdg"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

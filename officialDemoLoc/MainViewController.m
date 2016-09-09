@@ -1,46 +1,51 @@
 //
 //  MainViewController.m
-//  AMapLocationDemo
+//  officialDemoLoc
 //
-//  Created by 刘博 on 16/3/7.
+//  Created by 莫瑞伟 on 16/9/9.
 //  Copyright © 2016年 AutoNavi. All rights reserved.
 //
 
 #import "MainViewController.h"
+#import "MOPointAnnotation.h"
 #import "MOMapViewController.h"
+#import "MOMapLookGPS.h"
 
 @interface MainViewController ()
 
-@property (nonatomic,weak)UITextField *textF;
+@property (nonatomic,strong)MOPointAnnotation *pointAnnotation;
 
 @end
 
 @implementation MainViewController
 
-#pragma mark - UITableViewDataSource
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITextField *textF = [[UITextField alloc]init];
-    textF.placeholder = @"点击空白处push";
-    textF.frame = CGRectMake(50, 120, 200, 40);
-    self.textF = textF;
-    [self.view addSubview:textF];
+    
     
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    MOMapViewController *movc = [[MOMapViewController alloc]init];
+
+- (IBAction)clickPush:(id)sender {
+    
+    MOMapViewController *vc = [[MOMapViewController alloc]init];
     __weak typeof(self) weakSelf = self;
-    movc.option = ^(MOPointAnnotation *pointAnnotation){
-        weakSelf.textF.text = pointAnnotation.name;
-        NSLog(@"%@",pointAnnotation.name);
-        
+    vc.option = ^(MOPointAnnotation *pointAnnotation){
+        weakSelf.pointAnnotation = pointAnnotation;
     };
-    [self.navigationController pushViewController:movc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
+
+- (IBAction)clickLook:(id)sender {
+    if (self.pointAnnotation) {
+        MOMapLookGPS *vc = [[MOMapLookGPS alloc]init];
+        vc.pointAnnotation = self.pointAnnotation;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
+
 
 
 @end

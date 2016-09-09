@@ -66,10 +66,16 @@
             annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndetifier];
         }
         annotationView.canShowCallout   = YES;
-        annotationView.animatesDrop     = YES;
+        
         annotationView.draggable        = NO;
-        //        annotationView.pinColor         = MAPinAnnotationColorPurple;
-        annotationView.image = [UIImage imageNamed:@"icon_position"];//icon_position
+        if (self.location.coordinate.latitude == annotation.coordinate.latitude && self.location.coordinate.longitude == annotation.coordinate.longitude) {
+            annotationView.image = [UIImage imageNamed:@"icon_position"];
+            annotationView.animatesDrop     = NO;
+        }
+        else{
+            annotationView.image = [UIImage imageNamed:@"icon_me_position"];
+            annotationView.animatesDrop     = YES;
+        }
         return annotationView;
         
     }
